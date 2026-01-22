@@ -1,6 +1,6 @@
 {
   "name": "@moncreneau/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Moncreneau API client for Node.js",
   "main": "index.js",
   "scripts": {
