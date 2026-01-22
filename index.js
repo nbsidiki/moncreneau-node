@@ -15,7 +15,7 @@ class HttpClient {
     constructor(config) {
         this.apiKey = config.apiKey;
         this.client = axios.create({
-            baseURL: config.baseUrl || 'https://mc.duckdns.org/api/v1',
+            baseURL: config.baseUrl || 'https://mc-prd.duckdns.org/api/v1',
             timeout: config.timeout || 30000,
             headers: {
                 'Content-Type': 'application/json',

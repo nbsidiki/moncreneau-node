@@ -50,7 +50,7 @@ Full documentation: [https://moncreneau-docs.vercel.app/docs/v1/sdks/nodejs](htt
 
 ```javascript
 const client = new Moncreneau('mk_live_...', {
-  baseUrl: 'https://mc.duckdns.org/api/v1', // optional
+  baseUrl: 'https://mc-prd.duckdns.org/api/v1', // optional
   timeout: 30000 // optional, in milliseconds
 });
 ```
