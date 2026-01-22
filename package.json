@@ -13,16 +13,16 @@
     "appointments",
     "rendez-vous"
   ],
-  "author": "Moncreneau <support@moncreneau.gn>",
+  "author": "Moncreneau <moncreneau.rdv@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moncreneau/moncreneau-node.git"
+    "url": "https://github.com/nbsidiki/moncreneau-node.git"
   },
   "bugs": {
-    "url": "https://github.com/moncreneau/moncreneau-node/issues"
+    "url": "https://github.com/nbsidiki/moncreneau-node/issues"
   },
-  "homepage": "https://github.com/moncreneau/moncreneau-node#readme",
+  "homepage": "https://github.com/nbsidiki/moncreneau-node#readme",
   "files": [
     "index.js",
     "README.md",

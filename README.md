@@ -34,7 +34,7 @@ console.log(appointment.id); // appt_abc123
 
 ## Documentation
 
-Full documentation: [https://docs.moncreneau.gn/sdks/javascript](https://docs.moncreneau.gn/sdks/javascript)
+Full documentation: [https://moncreneau-docs.vercel.app/docs/v1/sdks/nodejs](https://moncreneau-docs.vercel.app/docs/v1/sdks/nodejs)
 
 ## Features
 
@@ -50,7 +50,7 @@ Full documentation: [https://docs.moncreneau.gn/sdks/javascript](https://docs.mo
 
 ```javascript
 const client = new Moncreneau('mk_live_...', {
-  baseUrl: 'https://api.moncreneau.gn/v1', // optional
+  baseUrl: 'https://mc.duckdns.org/api/v1', // optional
   timeout: 30000 // optional, in milliseconds
 });
 ```
@@ -186,10 +186,10 @@ While this package is written in JavaScript, you can use it in TypeScript projec
 
 ## Support
 
-- **Documentation**: [https://docs.moncreneau.gn](https://docs.moncreneau.gn)
-- **Discord**: [https://discord.gg/moncreneau](https://discord.gg/moncreneau)
-- **Email**: support@moncreneau.gn
-- **Issues**: [GitHub Issues](https://github.com/moncreneau/moncreneau-node/issues)
+- **Documentation**: [https://moncreneau-docs.vercel.app](https://moncreneau-docs.vercel.app)
+- **NPM**: [https://www.npmjs.com/package/@moncreneau/api](https://www.npmjs.com/package/@moncreneau/api)
+- **Email**: moncreneau.rdv@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/nbsidiki/moncreneau-node/issues)
 
 ## License
 
