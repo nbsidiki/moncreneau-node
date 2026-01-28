@@ -7,25 +7,19 @@ export interface MoncreneauConfig {
 
 export interface Appointment {
     id: string
-    departmentId: string
+    departmentId: number
     dateTime: string
     status: 'PENDING_PAYMENT' | 'SCHEDULED' | 'COMPLETED' | 'CANCELLED' | 'NO_SHOW'
-    userName: string
-    userPhone: string
-    userEmail?: string
-    notes?: string
+    name: string
     qrCode: string
     createdAt: string
     creditsConsumed: number
 }
 
 export interface CreateAppointmentRequest {
-    departmentId: string
+    departmentId: number
     dateTime: string
-    userName: string
-    userPhone: string
-    userEmail?: string
-    notes?: string
+    name: string
 }
 
 export interface AppointmentPage {
@@ -47,7 +41,7 @@ export interface ListAppointmentsParams {
 }
 
 export interface Department {
-    id: string
+    id: number
     name: string
     description?: string
     slotDuration: number
@@ -56,7 +50,7 @@ export interface Department {
 }
 
 export interface Availability {
-    departmentId: string
+    departmentId: number
     availability: Array<{
         date: string
         slots: Array<{
