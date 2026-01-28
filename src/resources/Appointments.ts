@@ -1,10 +1,10 @@
-import { HttpClient } from './http'
+import { HttpClient } from '../http'
 import type {
     Appointment,
     CreateAppointmentRequest,
     AppointmentPage,
     ListAppointmentsParams,
-} from './types'
+} from '../types'
 
 export class AppointmentsResource {
     constructor(private http: HttpClient) { }

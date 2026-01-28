@@ -1,9 +1,9 @@
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
 import type { MoncreneauConfig, ApiErrorDetails } from './types'
 import { MoncreneauError } from './types'
 
 export class HttpClient {
-    private client: any
+    private client: AxiosInstance
     private readonly apiKey: string
     private readonly maxRetries: number
 

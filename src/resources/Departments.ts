@@ -1,9 +1,9 @@
-import { HttpClient } from './http'
+import { HttpClient } from '../http'
 import type {
     Department,
     Availability,
     GetAvailabilityParams,
-} from './types'
+} from '../types'
 
 export class DepartmentsResource {
     constructor(private http: HttpClient) { }
