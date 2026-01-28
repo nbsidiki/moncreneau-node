@@ -22,14 +22,12 @@ const client = new Moncreneau('mk_live_YOUR_API_KEY');
 
 // Create an appointment
 const appointment = await client.appointments.create({
-  departmentId: 'dept_123',
+  departmentId: 5,  // Number: ID du département
   dateTime: '2026-01-20T10:00:00',
-  userName: 'Jean Dupont',
-  userPhone: '+224621234567',
-  userEmail: 'jean.dupont@example.com'
+  name: 'Jean Dupont'  // Nom du bénéficiaire
 });
 
-console.log(appointment.id); // appt_abc123
+console.log(appointment.id); // 123
 ```
 
 ## Documentation
@@ -60,10 +58,9 @@ const client = new Moncreneau('mk_live_...', {
 ```javascript
 // Create
 const appointment = await client.appointments.create({
-  departmentId: 'dept_123',
+  departmentId: 5,  // Number: ID du département
   dateTime: '2026-01-20T10:00:00',
-  userName: 'Jean Dupont',
-  userPhone: '+224621234567'
+  name: 'Jean Dupont'  // Nom du bénéficiaire
 });
 
 // List
@@ -156,12 +153,11 @@ app.use(express.json());
 
 app.post('/appointments', async (req, res) => {
   try {
+    // req.body doit contenir: departmentId (number), dateTime (string), name (string)
     const appointment = await client.appointments.create({
-      departmentId: req.body.departmentId,
+      departmentId: req.body.departmentId,  // Number
       dateTime: req.body.dateTime,
-      userName: req.body.userName,
-      userPhone: req.body.userPhone,
-      userEmail: req.body.userEmail
+      name: req.body.name  // Nom du bénéficiaire
     });
     
     res.json(appointment);
