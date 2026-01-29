@@ -14,12 +14,14 @@ export interface Appointment {
     qrCode: string
     createdAt: string
     creditsConsumed: number
+    externalUserId?: string
 }
 
 export interface CreateAppointmentRequest {
     departmentId: number
     dateTime: string
     name: string
+    externalUserId?: string
 }
 
 export interface AppointmentPage {
