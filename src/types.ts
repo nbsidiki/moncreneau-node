@@ -22,6 +22,7 @@ export interface CreateAppointmentRequest {
     dateTime: string
     name: string
     externalUserId?: string
+    workerId?: number
 }
 
 export interface AppointmentPage {
