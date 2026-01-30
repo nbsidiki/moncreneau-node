@@ -71,10 +71,10 @@ const appointments = await client.appointments.list({
 });
 
 // Retrieve
-const appointment = await client.appointments.retrieve('appt_abc123');
+const appointment = await client.appointments.retrieve(123);
 
 // Cancel
-await client.appointments.cancel('appt_abc123');
+await client.appointments.cancel(123);
 ```
 
 ### Departments
