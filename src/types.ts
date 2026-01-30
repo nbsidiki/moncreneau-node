@@ -39,6 +39,7 @@ export interface ListAppointmentsParams {
     size?: number
     status?: string
     departmentId?: string
+    externalUserId?: string
     startDate?: string
     endDate?: string
 }
