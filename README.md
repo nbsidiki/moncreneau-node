@@ -84,7 +84,7 @@ await client.appointments.cancel(123);
 const departments = await client.departments.list();
 
 // Get availability
-const availability = await client.departments.getAvailability('dept_123', {
+const availability = await client.departments.getAvailability(5, {
   startDate: '2026-01-20',
   endDate: '2026-01-27'
 });
