@@ -1,8 +1,7 @@
 import { HttpClient } from '../http'
 import type {
     Department,
-    Availability,
-    GetAvailabilityParams,
+    SlotAvailability,
 } from '../types'
 
 export class DepartmentsResource {
@@ -23,12 +22,13 @@ export class DepartmentsResource {
     }
 
     /**
-     * Get availability for a department
+     * Check availability for a single slot. The backend only accepts one
+     * `dateTime`, not a date range.
      */
     async getAvailability(
         id: string,
-        params: GetAvailabilityParams
-    ): Promise<Availability> {
-        return this.http.get<Availability>(`/departments/${id}/availability`, params)
+        dateTime: string
+    ): Promise<SlotAvailability> {
+        return this.http.get<SlotAvailability>(`/departments/${id}/availability`, { dateTime })
     }
 }

@@ -83,11 +83,9 @@ await client.appointments.cancel(123);
 // List departments
 const departments = await client.departments.list();
 
-// Get availability
-const availability = await client.departments.getAvailability(5, {
-  startDate: '2026-01-20',
-  endDate: '2026-01-27'
-});
+// Check availability for a single slot
+const availability = await client.departments.getAvailability('5', '2026-01-20T10:00:00');
+console.log(availability.available, availability.remainingSlots);
 ```
 
 ### Error Handling

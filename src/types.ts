@@ -26,12 +26,12 @@ export interface CreateAppointmentRequest {
 }
 
 export interface AppointmentPage {
-    content: Appointment[]
+    appointments: Appointment[]
     page: number
     size: number
     totalElements: number
     totalPages: number
-    last: boolean
+    isLast: boolean
 }
 
 export interface ListAppointmentsParams {
@@ -53,21 +53,15 @@ export interface Department {
     openingHours?: Record<string, Array<{ start: string; end: string }>>
 }
 
-export interface Availability {
-    departmentId: number
-    availability: Array<{
-        date: string
-        slots: Array<{
-            time: string
-            available: boolean
-            dateTime: string
-        }>
-    }>
-}
-
-export interface GetAvailabilityParams {
-    startDate: string
-    endDate: string
+/**
+ * Réponse réelle de GET /departments/{id}/availability?dateTime=... — un seul
+ * créneau, pas une plage (le backend n'accepte qu'un dateTime unique).
+ */
+export interface SlotAvailability {
+    slotTime: string
+    available: boolean
+    remainingSlots: number
+    unavailabilityReason?: string
 }
 
 export interface ApiErrorDetails {
